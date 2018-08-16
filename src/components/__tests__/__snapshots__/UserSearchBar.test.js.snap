@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UserSearchBar renders the component 1`] = `
+<form
+  className="reposSearch"
+  onSubmit={[Function]}
+>
+  <label
+    htmlFor="githubUsername"
+  >
+    Github username
+  </label>
+  <input
+    name="githubUsername"
+    onChange={[Function]}
+    placeholder="Enter username here"
+    type="text"
+    value=""
+  />
+  <button>
+    GO
+  </button>
+</form>
+`;

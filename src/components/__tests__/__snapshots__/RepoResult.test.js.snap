@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RepoResult renders the component with props 1`] = `
+<article>
+  <h3>
+    <a
+      href="https://github.com/google/androguard"
+      target="_blank"
+    >
+      Androguard
+    </a>
+  </h3>
+  <p>
+    Reverse engineering, Malware and goodware analysis of Android applications ... and more (ninja !)
+  </p>
+  <div
+    className="updatedInfo"
+    title=""
+  >
+    Updated 
+    Invalid date
+  </div>
+</article>
+`;

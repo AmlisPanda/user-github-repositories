@@ -1,0 +1,72 @@
+.reposContainer {
+    max-width: 500px;
+    padding: 5px 15px;
+    text-align: left;
+    font-family: "Segoe UI",Helvetica,Arial,sans-serif;
+    font-size: 0.8em;
+    background-color: #F5F5F5;
+}
+.reposSearch {
+    border-bottom: 2px solid black;
+    padding: 5px 0;
+}
+.reposSearch label {
+    margin-right: 5px;
+    color: #0366d6;
+}
+.reposSearch input {
+    height: 21px;
+    border: none;
+    background-color: white;
+    box-sizing: border-box;
+    outline: none;
+    padding: 0 5px;
+}
+.reposSearch button {
+    border: none;
+    height: 21px;
+    box-sizing: border-box;
+    cursor: pointer;
+    color: white;
+    background-color: #222222;
+    font-weight: bold;
+}
+.reposHeader {
+    position: relative;
+    margin: 5px 0 10px;
+}
+.reposHeader h2 {
+    font-size: 1.2em;
+    margin: 0;
+}
+.reposHeader select {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+}
+.reposList {
+}
+.reposList article {
+    background-color: white;
+    padding: 5px 10px;;
+    margin-bottom: 10px;
+    border-left: 1px solid #0366d6;
+}
+.reposList article h3 {
+    margin: 0;
+}
+.reposList article h3 a {
+    text-decoration: none;
+    color: #222222;
+}
+.reposList article h3 a:hover {
+    text-decoration: underline;
+}
+.reposList article p {
+    margin: 5px 0;
+}
+.reposList article .updatedInfo {
+    font-size: 0.8em;
+    font-style: italic;
+    text-align: right;
+}
