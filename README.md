@@ -3,11 +3,11 @@ ReactJS practice
 
 ## Getting started
 
-# Prerequisites
+### Prerequisites
 
 Node.js
 
-# Installing
+### Installing
 
 Clone the repository into a local directory :
 ```
@@ -29,7 +29,7 @@ Run the application :
 npm start
 ```
 
-## Running the tests
+### Running the tests
 
 ```
 npm test
