@@ -13,12 +13,5 @@ exports[`RepoResult renders the component with props 1`] = `
   <p>
     Reverse engineering, Malware and goodware analysis of Android applications ... and more (ninja !)
   </p>
-  <div
-    className="updatedInfo"
-    title=""
-  >
-    Updated 
-    Invalid date
-  </div>
 </article>
 `;

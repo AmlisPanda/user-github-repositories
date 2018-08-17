@@ -22,7 +22,6 @@ export class UserSearchBar extends React.Component {
             <form className="reposSearch" onSubmit={(e) => this.props.onSearch(e, this.state.username)}>
                 <label htmlFor="githubUsername">Github username</label>
                 <input type="text" name="githubUsername" value={this.state.username} onChange={(e) => this.usernameChange(e)} placeholder="Enter username here" />
-
                 <button>GO</button>
             </form>
         )
@@ -30,5 +29,8 @@ export class UserSearchBar extends React.Component {
 }
 
 UserSearchBar.propTypes = {
-    onSearch: PropTypes.func.isRequired
+    onSearch: PropTypes.func
+}
+UserSearchBar.defaultProps = {
+    onSearch: () => {}
 }

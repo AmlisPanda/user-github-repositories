@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`RepositoriesHeader renders the component 1`] = `
+exports[`RepositoriesHeader renders correctly 1`] = `
 <div
   className="reposHeader"
 >
@@ -9,12 +9,46 @@ exports[`RepositoriesHeader renders the component 1`] = `
   </h2>
   <div>
     Found 
+    0
      repositories. Showing top 
+    10
     .
   </div>
   <select
     id="sortList"
-    onChange={undefined}
+    onChange={[Function]}
+  >
+    <option
+      value="0"
+    >
+      Most recent first
+    </option>
+    <option
+      value="1"
+    >
+      Oldest first
+    </option>
+  </select>
+</div>
+`;
+
+exports[`RepositoriesHeader renders correctly with props 1`] = `
+<div
+  className="reposHeader"
+>
+  <h2>
+    Repositories
+  </h2>
+  <div>
+    Found 
+    15
+     repositories. Showing top 
+    20
+    .
+  </div>
+  <select
+    id="sortList"
+    onChange={[Function]}
   >
     <option
       value="0"

@@ -23,5 +23,10 @@ export class RepositoriesHeader extends React.Component {
 RepositoriesHeader.propTypes = {
     reposNb: PropTypes.number,
     top: PropTypes.number,
-    onSort: PropTypes.func.isRequired
+    onSort: PropTypes.func
+}
+RepositoriesHeader.defaultProps = {
+    reposNb: 0,
+    top: 10,
+    onSort: () => {}
 }
