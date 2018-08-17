@@ -29,7 +29,7 @@ Run the application :
 npm start
 ```
 
-### Running the tests
+## Running the tests
 
 ```
 npm test
