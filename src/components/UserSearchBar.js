@@ -1,5 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
+/* Search bar for the Github user */
 export class UserSearchBar extends React.Component {
 
     constructor(props) {
@@ -7,11 +9,9 @@ export class UserSearchBar extends React.Component {
         this.state = {
             username: ""
         }
-
-        this.usernameChange = this.usernameChange.bind(this);
     }
 
-    usernameChange(event) {
+    usernameChange = (event) => {
         this.setState({
             username: event.target.value
         })
@@ -21,10 +21,14 @@ export class UserSearchBar extends React.Component {
         return (
             <form className="reposSearch" onSubmit={(e) => this.props.onSearch(e, this.state.username)}>
                 <label htmlFor="githubUsername">Github username</label>
-                <input type="text" name="githubUsername" value={this.state.username} onChange={this.usernameChange} placeholder="Enter username here" />
+                <input type="text" name="githubUsername" value={this.state.username} onChange={(e) => this.usernameChange(e)} placeholder="Enter username here" />
 
                 <button>GO</button>
             </form>
         )
     }
+}
+
+UserSearchBar.propTypes = {
+    onSearch: PropTypes.func.isRequired
 }

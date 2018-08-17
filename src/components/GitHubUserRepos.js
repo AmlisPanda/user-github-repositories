@@ -1,10 +1,12 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { UserSearchBar } from './UserSearchBar';
 import { RepositoriesHeader } from './RepositoriesHeader';
 import { RepositoriesList } from './RepositoriesList';
 
 import './GitHubUserRepos.css';
 
+/* Component GitHubUserRepos that returns <top> repositories of a given user */
 export class GitHubUserRepos extends React.Component {
 
     constructor(props) {
@@ -13,44 +15,49 @@ export class GitHubUserRepos extends React.Component {
             sortOrder: 0,
             reposList: []
         }
-        this.search = this.search.bind(this);
-        this.sort = this.sort.bind(this);
     }
 
-
-    search(event, username) {
+    search = (event, username) => {
         event.preventDefault();
-        if (username) {
-            fetch("https://api.github.com/users/" + username + "/repos")
-            .then(function(response) {
-                return response.json();
-            }).then(function(json) {
-                this.setState({
-                    reposList: json
-                });
-            }.bind(this));
-        }
+        if (username)
+            this.handleFetch(username);
     }
 
-    sort(event) {
+    handleFetch = (username) => {
+
+        fetch(`https://api.github.com/users/${username}/repos`)
+        .then((response) => { return response.json();})
+        .then((json) => {
+            this.setState({
+                reposList: json
+            });
+        });
+    }
+
+    sort = (event) => {
         this.setState({
-            sortOrder: event.target.value
+            sortOrder: parseInt(event.target.value, 10)
         })
     }
 
     render() {
 
-        let top = (this.props.top) ? this.props.top : 10;
-
         return (
             <div className="reposContainer">
                 <UserSearchBar onSearch={this.search} />
 
-                <RepositoriesHeader onSort={this.sort} reposNb={this.state.reposList.length} top={top} />
+                <RepositoriesHeader onSort={this.sort} reposNb={this.state.reposList.length} top={this.props.top} />
 
-                <RepositoriesList list={this.state.reposList} order={this.state.sortOrder} top={top} />
+                <RepositoriesList list={this.state.reposList} order={this.state.sortOrder} top={this.props.top} />
 
             </div>
         )
     }
+}
+
+GitHubUserRepos.propTypes = {
+    top: PropTypes.number
+}
+GitHubUserRepos.defaultProps = {
+    top: 10
 }

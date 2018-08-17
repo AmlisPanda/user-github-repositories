@@ -1,10 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
+/* Header of the list : results count & top */
 export class RepositoriesHeader extends React.Component {
-
-    constructor(props) {
-        super(props);
-    }
 
     render() {
         return (
@@ -20,4 +18,10 @@ export class RepositoriesHeader extends React.Component {
             </div>
         )
     }
+}
+
+RepositoriesHeader.propTypes = {
+    reposNb: PropTypes.number,
+    top: PropTypes.number,
+    onSort: PropTypes.func.isRequired
 }

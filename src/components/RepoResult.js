@@ -1,6 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import moment from 'moment';
 
+/* Repository item : name, url, description, updated at */
 export class RepoResult extends React.Component {
 
     render() {
@@ -14,4 +16,8 @@ export class RepoResult extends React.Component {
             </article>
         )
     }
+}
+
+RepoResult.propTypes = {
+    repo: PropTypes.object.isRequired
 }

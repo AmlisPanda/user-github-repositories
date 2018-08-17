@@ -1,15 +1,16 @@
 import React from 'react';
-import {RepoResult} from './RepoResult';
+import PropTypes from 'prop-types';
+import { RepoResult } from './RepoResult';
 
+/* List of the repositories */
 export class RepositoriesList extends React.Component {
 
     render() {
 
-        const list = this.props.list;
-        const order = this.props.order;
+        const { list, order } = this.props;
 
         let orderedList;
-        if (order == 1) {
+        if (order === 1) {
             orderedList = list.sort((a, b) => new Date(a.updated_at) - new Date(b.updated_at));
         }
         else
@@ -25,4 +26,10 @@ export class RepositoriesList extends React.Component {
             </div>
         )
     }
+}
+
+RepositoriesList.propTypes = {
+    list: PropTypes.array,
+    order: PropTypes.number,
+    top: PropTypes.number
 }
