@@ -19,7 +19,7 @@ Go in this directory :
 cd "user-github-repositories"
 ```
 
-Install the packages :
+Install the packages with Node.js command prompt :
 ```
 npm install
 ```
