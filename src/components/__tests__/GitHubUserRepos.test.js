@@ -27,17 +27,17 @@ describe('GitHubUserRepos', () => {
 	it('renders component correctly with "top" = 10 if not defined', () => {
 
 		expect(wrapper.prop("top")).toBe(10);
-    	});
+	});
 
 
-    	it('should change "sortOrder" state when sort order changes', () => {
+	it('should change "sortOrder" state when sort order changes', () => {
 
 		wrapper.find("#sortList").simulate("change", { target : { value: "1" } });
 		expect(wrapper.state("sortOrder")).toBe(1);
-    	});
+	});
 
 
-    	it("verify that handleFetch isn't called when the username is null", () => {
+	it("verify that handleFetch isn't called when the username is null", () => {
 
 		const instance = wrapper.instance();
 		const username = "";
@@ -48,7 +48,7 @@ describe('GitHubUserRepos', () => {
 
 		expect(instance.search).toHaveBeenCalled();
 		expect(instance.handleFetch).toHaveBeenCalledTimes(0);
-    	});
+	});
 
 
   	it("verify that handleFetch is called when the username is defined", () => {
@@ -63,5 +63,5 @@ describe('GitHubUserRepos', () => {
 		expect(instance.search).toHaveBeenCalled();
 		expect(instance.search).toHaveBeenCalledWith(mockedEvent, username);
 		expect(instance.handleFetch()).toEqual(repoUser);
-    	});
+	});
 });
