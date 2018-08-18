@@ -1,5 +1,5 @@
 # user-github-repositories
-ReactJS practice
+Display the repositories of a Github user
 
 ## Getting started
 
