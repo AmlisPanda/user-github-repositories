@@ -5,6 +5,7 @@
     font-family: "Segoe UI",Helvetica,Arial,sans-serif;
     font-size: 0.8em;
     background-color: #F5F5F5;
+    margin: auto;
 }
 .reposSearch {
     border-bottom: 2px solid black;
